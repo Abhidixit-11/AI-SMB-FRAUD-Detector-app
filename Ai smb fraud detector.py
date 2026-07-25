@@ -1,6 +1,15 @@
 import io
 import pandas as pd
 import streamlit as st
+import streamlit as st
+
+# Yeh HTML head mein manifest link inject karega
+st.markdown(
+    """
+    <link rel="manifest" href="/app/static/manifest.json">
+    """,
+    unsafe_allow_html=True,
+)
 
 # Page Configuration
 st.set_page_config(
