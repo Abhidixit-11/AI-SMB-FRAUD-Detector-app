@@ -3,6 +3,16 @@ import pandas as pd
 import streamlit as st
 import streamlit as st
 
+# Yeh code upar ke GitHub links aur niche ke Streamlit logos ko hide kar dega
+hide_streamlit_style = """
+    <style>
+    #MainMenu {visibility: hidden;}
+    footer {visibility: hidden;}
+    header {visibility: hidden;}
+    .stApp > header {visibility: hidden;}
+    </style>
+"""
+st.markdown(hide_streamlit_style, unsafe_allow_html=True)
 # Yeh HTML head mein manifest link inject karega
 st.markdown(
     """
