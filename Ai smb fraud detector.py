@@ -6,10 +6,16 @@ import streamlit as st
 # Yeh code upar ke GitHub links aur niche ke Streamlit logos ko hide kar dega
 hide_streamlit_style = """
     <style>
+    /* Purane menus aur footer hide karne ke liye */
     #MainMenu {visibility: hidden;}
     footer {visibility: hidden;}
     header {visibility: hidden;}
-    .stApp > header {visibility: hidden;}
+    
+    /* Streamlit ka floating 'Manage app' / Viewer badge hide karne ke liye */
+    [data-testid="stStatusWidget"] {visibility: hidden; display: none;}
+    .viewerBadge_container__1QSob {visibility: hidden; display: none;}
+    div[class*="viewerBadge"] {visibility: hidden; display: none;}
+    #root header {visibility: hidden; display: none;}
     </style>
 """
 st.markdown(hide_streamlit_style, unsafe_allow_html=True)
